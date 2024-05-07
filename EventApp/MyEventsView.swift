@@ -7,12 +7,32 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct MyEventsView: View {
+    let events: [Event]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("My Events")
+                .font(.title)
+                .padding()
+            
+            List(events) { event in
+                EventRowView(event: event)
+            }
+        }
     }
 }
 
-#Preview {
-    MyEventsView()
+let myTestData = [
+    Event(id:1, title: "Выставка современного искусства", date: "25 мая 2024"),
+
+]
+
+struct MyEventsView_Previews: PreviewProvider {
+    static var previews: some View {
+        MyEventsView(events: myTestData)
+    }
 }
+

@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2013057D2BEA58DC00241DE0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013057C2BEA58DC00241DE0 /* ProfileView.swift */; };
+		2013057F2BEA591A00241DE0 /* MyEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013057E2BEA591A00241DE0 /* MyEventsView.swift */; };
+		201305812BEA5CB200241DE0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201305802BEA5CB200241DE0 /* SearchView.swift */; };
+		201305852BEA790E00241DE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201305842BEA790E00241DE0 /* AuthService.swift */; };
+		201305872BEA795B00241DE0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201305862BEA795B00241DE0 /* LoginView.swift */; };
 		2021FE182BE9FE510039FBCA /* EventAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021FE172BE9FE510039FBCA /* EventAppApp.swift */; };
 		2021FE1A2BE9FE510039FBCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021FE192BE9FE510039FBCA /* ContentView.swift */; };
 		2021FE1C2BE9FE550039FBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2021FE1B2BE9FE550039FBCA /* Assets.xcassets */; };
 		2021FE1F2BE9FE550039FBCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2021FE1E2BE9FE550039FBCA /* Preview Assets.xcassets */; };
+		2021FE262BE9FEA40039FBCA /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021FE252BE9FEA30039FBCA /* EventListView.swift */; };
+		2021FE282BEA00C00039FBCA /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021FE272BEA00C00039FBCA /* EventDetailView.swift */; };
+		2021FE2B2BEA05B10039FBCA /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2021FE2A2BEA05B10039FBCA /* URLImage */; };
+		2021FE2D2BEA05B10039FBCA /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 2021FE2C2BEA05B10039FBCA /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2013057C2BEA58DC00241DE0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2013057E2BEA591A00241DE0 /* MyEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsView.swift; sourceTree = "<group>"; };
+		201305802BEA5CB200241DE0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		201305842BEA790E00241DE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		201305862BEA795B00241DE0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2021FE142BE9FE510039FBCA /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2021FE172BE9FE510039FBCA /* EventAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAppApp.swift; sourceTree = "<group>"; };
 		2021FE192BE9FE510039FBCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2021FE1B2BE9FE550039FBCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2021FE1E2BE9FE550039FBCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2021FE252BE9FEA30039FBCA /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		2021FE272BEA00C00039FBCA /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2021FE2D2BEA05B10039FBCA /* URLImageStore in Frameworks */,
+				2021FE2B2BEA05B10039FBCA /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				2021FE172BE9FE510039FBCA /* EventAppApp.swift */,
+				2013057C2BEA58DC00241DE0 /* ProfileView.swift */,
+				2021FE272BEA00C00039FBCA /* EventDetailView.swift */,
+				2021FE252BE9FEA30039FBCA /* EventListView.swift */,
+				201305842BEA790E00241DE0 /* AuthService.swift */,
+				201305862BEA795B00241DE0 /* LoginView.swift */,
 				2021FE192BE9FE510039FBCA /* ContentView.swift */,
+				201305802BEA5CB200241DE0 /* SearchView.swift */,
+				2013057E2BEA591A00241DE0 /* MyEventsView.swift */,
 				2021FE1B2BE9FE550039FBCA /* Assets.xcassets */,
 				2021FE1D2BE9FE550039FBCA /* Preview Content */,
 			);
@@ -83,6 +108,10 @@
 			dependencies = (
 			);
 			name = EventApp;
+			packageProductDependencies = (
+				2021FE2A2BEA05B10039FBCA /* URLImage */,
+				2021FE2C2BEA05B10039FBCA /* URLImageStore */,
+			);
 			productName = EventApp;
 			productReference = 2021FE142BE9FE510039FBCA /* EventApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 2021FE0B2BE9FE500039FBCA;
+			packageReferences = (
+				2021FE292BEA05B00039FBCA /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 2021FE152BE9FE510039FBCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2021FE282BEA00C00039FBCA /* EventDetailView.swift in Sources */,
+				2013057F2BEA591A00241DE0 /* MyEventsView.swift in Sources */,
 				2021FE1A2BE9FE510039FBCA /* ContentView.swift in Sources */,
+				201305872BEA795B00241DE0 /* LoginView.swift in Sources */,
+				201305852BEA790E00241DE0 /* AuthService.swift in Sources */,
+				201305812BEA5CB200241DE0 /* SearchView.swift in Sources */,
+				2013057D2BEA58DC00241DE0 /* ProfileView.swift in Sources */,
+				2021FE262BE9FEA40039FBCA /* EventListView.swift in Sources */,
 				2021FE182BE9FE510039FBCA /* EventAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +383,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2021FE292BEA05B00039FBCA /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2021FE2A2BEA05B10039FBCA /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2021FE292BEA05B00039FBCA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		2021FE2C2BEA05B10039FBCA /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2021FE292BEA05B00039FBCA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2021FE0C2BE9FE500039FBCA /* Project object */;
 }
