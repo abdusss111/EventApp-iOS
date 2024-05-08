@@ -1,11 +1,3 @@
-//
-//  AuthService.swift
-//  EventApp
-//
-//  Created by Abdussalam Abdurakhimov on 07.05.2024.
-//
-
-
 import Foundation
 
 struct Credentials: Encodable {
@@ -14,7 +6,8 @@ struct Credentials: Encodable {
 }
 
 struct AuthResponse: Decodable {
-    let token: String
+    let access: String
+    let refresh: String
 }
 
 class AuthService {
@@ -41,6 +34,7 @@ class AuthService {
                 completion(.failure(error))
                 return
             }
+            
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(NetworkError.invalidResponse))
@@ -50,10 +44,12 @@ class AuthService {
                 completion(.failure(NetworkError.noData))
                 return
             }
+            
             do {
                 let authResponse = try JSONDecoder().decode(AuthResponse.self, from: data)
-                saveToken(authResponse.token) // Сохраняем токен
-                completion(.success(authResponse.token))
+                saveToken(authResponse.access) // Сохраняем токен доступа
+                saveRefreshToken(authResponse.refresh) // Сохраняем токен обновления
+                completion(.success(authResponse.access))
             } catch {
                 completion(.failure(error))
             }
@@ -64,8 +60,16 @@ class AuthService {
         UserDefaults.standard.set(token, forKey: "AuthToken") // Сохраняем токен в UserDefaults
     }
     
+    static func saveRefreshToken(_ refreshToken: String) {
+        UserDefaults.standard.set(refreshToken, forKey: "RefreshToken") // Сохраняем токен обновления в UserDefaults
+    }
+    
     static func getToken() -> String? {
         return UserDefaults.standard.string(forKey: "AuthToken") // Получаем токен из UserDefaults
+    }
+    
+    static func getRefreshToken() -> String? {
+        return UserDefaults.standard.string(forKey: "RefreshToken") // Получаем токен обновления из UserDefaults
     }
 }
 
